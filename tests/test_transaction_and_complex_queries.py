@@ -53,7 +53,7 @@ def test_transaction_rollback_on_failure():
         conn.close()
 
     author = Author.find_by_name("Rollback Author")
-    assert author == []
+    assert author is None
 
 def test_magazine_top_publisher():
     top_magazine = Magazine.top_publisher()
